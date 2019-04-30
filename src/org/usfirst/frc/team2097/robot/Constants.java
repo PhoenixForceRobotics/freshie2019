@@ -15,14 +15,14 @@ public class Constants {
             public static int DBTR3 =14;
             //DRIVEBASE RIGHT MOTORS
 
-            public static final boolean DBTL1_BW = false;
-            public static final boolean DBTL2_BW = false;
-            public static final boolean DBTL3_BW = false;
+            public static final boolean DBTL1_REVERSE = false;
+            public static final boolean DBTL2_REVERSE = false;
+            public static final boolean DBTL3_REVERSE = false;
             //LEFT
 
-            public static final boolean DBTR1_BW = true;
-            public static final boolean DBTR2_BW = true;
-            public static final boolean DBTR3_BW = true;
+            public static final boolean DBTR1_REVERSE = true;
+            public static final boolean DBTR2_REVERSE = true;
+            public static final boolean DBTR3_REVERSE = true;
             //RIGHT
 
         }
@@ -33,8 +33,8 @@ public class Constants {
             public static int HD2 = 16;
             //HDRIVE MOTORS
 
-            public static final boolean HD1_BW = false;
-            public static final boolean HD2_BW = true;
+            public static final boolean HD1_REVERSE = false;
+            public static final boolean HD2_REVERSE = true;
 
         }
 

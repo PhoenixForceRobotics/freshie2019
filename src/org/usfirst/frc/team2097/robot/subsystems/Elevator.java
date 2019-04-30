@@ -12,6 +12,6 @@ public class Elevator extends Subsystems
     public Elevator()
     {
         elevator1 = new Motor(Conststants.MotorMap.Elevator.ELEVATOR1, kbrushed, Conststants.MotorMap.Elevator.ElEVATOR1_REVERSED);
-        
+        //ANDREW HAS A QUESTION-----------------------------------------------------------------------------------Why does this say reversed, when in the constants, it says REVERSE, not REVERSED?
     }
 }
