@@ -1,4 +1,4 @@
-package org.usfirst.frc.team2097.robot.subsystems.Utility;
+package org.usfirst.frc.team2097.robot.Utility;
 
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
