@@ -1,13 +1,19 @@
-import frc.team2097.controller.BobXboxController;
+
 
 
 public class OI{
+        Joystick joyLeft = new Joystick(0);
+        Joystick joyRight = new Joystick(1);
 
+        Button A = new Button(1);
+        Button B = new Button(2);
+        Button X = new Button(3);
+        Button Y = new Button (4);
+        Button LB = new Button (5);
+        Button RB = new Button(6);
 
-        BobXboxController driverController = new BobXboxController(0,0.11,0.11);
-        BobXboxController evnController = new BobXboxController(1,0.11,0.11);
-                        //Evan is the coolest freshman
-
+        boolean valRB, valLB, valA, valB, valY , valX; 
+        double joyLeftVal, joyRightVal;
 
     public OI(){
 
@@ -15,7 +21,7 @@ public class OI{
             driverController.rightTrigger.whileheld(new runHDrive());
             // Runs the HDrive, or the side to side wheels.
 
-            driverController.rightStick.whileheld(new RunJankBase());
+               driverController.rightStick.whileheld(new RunJankBase());
             driverController.rightStick.whileheld(new RunJankBase());
             //These run the drivebase, and they are the sticks on the top of the controller
 
@@ -39,5 +45,12 @@ public class OI{
 
     }
 
+
+    public controllMe(){
+
+
+
+
+    }
 
 }
