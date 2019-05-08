@@ -46,7 +46,17 @@ public class Constants {
             public static final boolean ELEVATOR1_REVERSE = true;
             public static final boolean ELEVATOR2_REVERSE = true;
 
-        }   
+        }  
+       
+        public static class BallCollector{
+            //Collecter Arm Rotation
+            public static int COLLECTER_ROTATE = 4;
+            public static int COLLECTER_ROTATE1 = 6;
+            public static int COLLECTORIO = 7;
+
+            public static final boolean COLLECTER_ROTATE_REVERSED = true;
+            public static final boolean COLLECTER_ROTATE1_REVERSED = false;
+            public static final boolean COLLECTORIO_REVERSED = true; 
 
 
     }
