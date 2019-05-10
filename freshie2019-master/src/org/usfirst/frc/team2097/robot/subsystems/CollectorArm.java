@@ -9,7 +9,8 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class BallCollector extends Subsystems
 {
-        private Motor collecter_rotate, collecter_rotate1, collecterio;
+        private Motor collecter_rotate;
+        private Motor collecter_rotate1, collecterio;
         
         public rotate(){
 
