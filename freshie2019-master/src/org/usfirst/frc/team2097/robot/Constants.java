@@ -46,8 +46,20 @@ public class Constants {
             public static final boolean ELEVATOR1_REVERSE = true;
             public static final boolean ELEVATOR2_REVERSE = true;
 
-        }   
+        }
+        
+        public static class BallCollector
+        {
+            //COLLECTOR_ARM_ROTATOR rotats the arm that the collector is on if that makes sense
+            //COLLECTOR_IN_OUT means intake outake but its action is called suck and kashoot  in the code, dont get confused
+            public static int COLLECTOR_ARM_ROTATER = 4;
+            public static int COLLECTOR_ARM_ROTATER1 = 6;
+            public static int COLLECTOR_IN_OUT = 7;
 
+            public static final boolean COLLECTOR_ARN_ROTATER_REVERSED = true;
+            public static final boolean COLLECTOR_ARM_ROTATER1_REVERSED = false;
+            public static final boolean COLLECTOR_IN_OUT_REVERSED = true;
 
+        }
     }
 }
