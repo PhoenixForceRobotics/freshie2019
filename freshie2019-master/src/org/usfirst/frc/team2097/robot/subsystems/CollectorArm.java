@@ -7,31 +7,35 @@ import javax.naming.ldap.Control;
 
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
-public class BallCollector extends Subsystems
+public class CollectorArm extends Subsystems
 {
-        private Motor collecter_rotate;
-        private Motor collecter_rotate1, collecterio;
+    private Motor collecter_rotate, collecter_rotate1;
         
-        public rotate(){
-
-            collecter_rotate = new Motor(Constants.MotorMap.BallCollector.COLLECTER_ROTATE, kbrushless, Constants.MotorMap.BallCollector.COLLECTER_ROTATE_REVERSED);
-            collecter_rotate1 = new Motor(Constants.MotorMap.BallCollector.COLLECTER_ROTATE1, kbrushless, Constants.MotorMap.BallCollector.COLLECTER_ROTATE1_REVERSED);
-            collecterio = new Motor(Constants.MotorMap.BallCollector.COLLECTORIO, kbrushless, Constants.MotorMap.BallCollector.COLLECTORIO_REVERSED);
-            collecter_rotate1.follow(collecter_rotate); //gotta make one rotater follow the other for simplicity
-    }
+        public rotate()
+        {
+            collector_arm_rotater = new Motor(Constants.MotorMap.BallCollector.COLLECTOR_ARM_ROTATER, kbrushless, Constants.MotorMap.BallCollector.COLLECTOR_ROTATER_REVERSED);
+            collector_arm_rotater1 = new Motor(Constants.MotorMap.BallCollector.COLLECTOR_ARM_ROTATER1, kbrushless, Constants.MotorMap.BallCollector.COLLECTOR_ROTATER1_REVERSED);
+            //gotta make one spinnin follow the other for simplicity
+            collector_arm_rotater1.follow(collector_arm_rotater);
+        }
             
-    public void flopDown(ControlMode mode, double value){
-        BALL_ROTATE.set(mode, value);
+    public void flopDown(double speed)
+    {
+        rotate.set(speed);
     }
 
-    public void retract(ControlMode mode, double value){
-        BALL_ROTATE.set(mode, -value);
+    public void retract(double speed)
+    {
+        rotate.set(-speed);
     }
 
-    public void killcollecter_rotate(){
+    public void killcollecter_arm_rotate()
+    {
+        rotate.set(0);
     }
     
-    public void initDefaultCommand(){
+    public void initDefaultCommand()
+    {
     }
 
 }
