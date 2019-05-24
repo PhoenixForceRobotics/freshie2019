@@ -11,7 +11,7 @@ public class BallCollector extends Subsystems
 
         public collect()
         {
-            ball_collector = new Motor(Constants.MotorMap.BallCollector.COLLECTER_IN_OUT, kbrushless, Constants.MotorMap.BallCollector.COLLECTER_IN_OUT_REVERSED);)
+            ball_collector = new Motor(Constants.MotorMap.BallCollector.COLLECTER_IN_OUT, kbrushless, Constants.MotorMap.BallCollector.COLLECTER_IN_OUT_REVERSED);
         }
 
         public void suck(double value)

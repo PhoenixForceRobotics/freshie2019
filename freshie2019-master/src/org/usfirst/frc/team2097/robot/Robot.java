@@ -10,6 +10,15 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team2097.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2097.robot.services.OI;
 import org.usfirst.frc.team2097.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team2097.robot.Utility.driverCont;
+import org.usfirst.frc.team2097.robot.subsystems.BallCollector;
+import org.usfirst.frc.team2097.robot.subsystems.CollectorArm;
+import org.usfirst.frc.team2097.robot.subsystems.Elevator;
+import org.usfirst.frc.team2097.robot.subsystems.JankBase;
+import org.usfirst.frc.team2097.robot.subsystems.Jankdrive;
+import org.usfirst.frc.team2097.robot.subsystems.SpeedShifter;
+import org.usfirst.frc.team2097.robot.Utility.driverCont;
+import org.usfirst.frc.team2097.robot.Utility.opCont;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -22,6 +31,13 @@ public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
+	public static driverCont driverController;
+	public static BallCollector ballCollector;
+	public static CollectorArm collectorArm;
+	public static Elevator elevator;
+	public static JankBase jankBase;
+	public static JankDrive jankDrive;
+	public static opCont opController;
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -33,6 +49,11 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		oi = new OI();
+		driverController = new driverCont();
+		ballCollector = new BallCollector();
+		collectorArm = new CollectorArm();
+		elevator = new Elevator();
+		
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);

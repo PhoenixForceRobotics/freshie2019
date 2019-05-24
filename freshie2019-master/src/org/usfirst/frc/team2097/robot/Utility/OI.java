@@ -1,14 +1,23 @@
 
 package Utility;
 
+import frc.robot.commands.RunJankBase;
+
 
 
 public class OI{
        
-        driverController = new driverCont(0, 0.11, 0.11);
-        operatorController = new opCont(1, 0.11, 0.11);
+        public driverCont driverController;
+        // = new driverCont(0, 0.11, 0.11);
+        public opCont operatorController;
+        //public  = new opCont(1, 0.11, 0.11);
 
-    public OI(){     
+        
+
+     OI(){    
+         
+        opController = new operatorController(1, 0.11, 0.11);
+        driController = new driverCont(0, 0.11, 0.11);
 
        driverController.joyLeft.whileHld(new RunJankBase());
        driverController.joyRight.whileHled(new RunJankBase());
@@ -18,6 +27,7 @@ public class OI{
        //this should run the shifter
 
     }
+}
 
 
  
@@ -25,4 +35,3 @@ public class OI{
 
     
 
-}

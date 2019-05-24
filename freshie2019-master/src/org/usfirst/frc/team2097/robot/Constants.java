@@ -61,5 +61,22 @@ public class Constants {
             public static final boolean COLLECTOR_IN_OUT_REVERSED = true;
 
         }
+
+        public static class Numbers 
+        {
+
+            double scalerOne = .8 ;
+            //moving on from drivebase
+            //written by big Chungus
+
+            double scalerTwo = .5 ;
+            //this is the one for the HDrive, I took the easy way out
+            //written by Andrew
+
+            double scalerThree = .4 ;
+            // double is the type
+            // scalerThree is the name (written by Andrew)
+
+        }
     }
 }
