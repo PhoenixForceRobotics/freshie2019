@@ -25,6 +25,7 @@ public class Jandrive extends Subsystem {
     public HD1(ControlMode mode, double value){
 
         HD1.set(mode, value);
+        HD2.set(mode, value);
 
     }
 

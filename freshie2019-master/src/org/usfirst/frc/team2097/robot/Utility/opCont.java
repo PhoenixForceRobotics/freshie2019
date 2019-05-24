@@ -1,3 +1,10 @@
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.JoystickButton;
+
+import edu.wpi.first.wpilibj.GenericHID;
+
+
+
 public class opCont{
     public  Joystick joyLeft = new Joystick(0);
      public Joystick joyRight = new Joystick(1);
